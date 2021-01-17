@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, useRef, useState } from "react";
 import styled from "styled-components/macro";
 
 import "react-image-crop/dist/ReactCrop.css";
@@ -20,13 +20,7 @@ const Authenticated = (props: Props) => {
   const [ratioHeight, setRatioHeight] = useState(1);
   const [isRatioCustom, setIsRatioCustom] = useState(false);
 
-  interface IDimension {
-    width: number;
-    height: number;
-  }
-
   const handleRatioChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    console.log(e.target.value);
     switch (e.target.value) {
       case "1:1":
         setRatioWidth(1);
@@ -84,17 +78,13 @@ const Authenticated = (props: Props) => {
           let newFileArray: File[] = [];
           let newObjectURLArray: string[] = [];
           let newImageArray: HTMLImageElement[] = [];
-          let newDimensions: IDimension[] = [];
           Array.from(e.currentTarget.files || []).forEach((file) => {
             newFileArray.push(file);
             newObjectURLArray.push(URL.createObjectURL(file));
             const img = new Image();
             img.src = URL.createObjectURL(file);
-            console.log(file);
+
             img.onload = (e: any) => {
-              console.log(e);
-              console.log(e.path[0].naturalWidth);
-              console.log(e.path[0].naturalHeight);
               setDimensions((prevState: any) => {
                 prevState[file.name] = {
                   width: e.path[0].naturalWidth,
@@ -164,7 +154,6 @@ const Authenticated = (props: Props) => {
               <Picture
                 source={objectURLArray[index]}
                 filename={file.name}
-                dimensions={dimensions}
                 ratioWidth={ratioWidth}
                 ratioHeight={ratioHeight}
               />

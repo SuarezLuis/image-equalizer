@@ -1,5 +1,5 @@
 {
-  "name": "image-standardize",
+  "name": "image-equalizer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +24,7 @@
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
-"homepage": "https://suarezluis.github.io/image-equalizer",
+  "homepage": "https://suarezluis.github.io/image-equalizer",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

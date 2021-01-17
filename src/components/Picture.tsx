@@ -8,7 +8,7 @@ import getCroppedImg from "../getCroppedImage";
 interface Props {
   source: string;
   filename: string;
-  dimensions: any;
+
   ratioWidth: number;
   ratioHeight: number;
 }
@@ -16,7 +16,7 @@ interface Props {
 const Picture = ({
   source,
   filename,
-  dimensions,
+
   ratioWidth,
   ratioHeight,
 }: Props) => {
@@ -96,7 +96,6 @@ const Picture = ({
       return newCrop;
     });
   }, [
-    dimensions,
     filename,
     imageProperties.height,
     imageProperties.width,
@@ -112,7 +111,6 @@ const Picture = ({
         src={source}
         crop={crop}
         onChange={(crop) => {
-          console.log(crop);
           setCrop(crop);
         }}
         onImageLoaded={(image) => {
@@ -147,7 +145,7 @@ const Picture = ({
               crop,
               `equalized-${filename}`
             );
-            console.log(download);
+
             const tempLink = document.createElement("a");
             tempLink.href = window.URL.createObjectURL(download);
             tempLink.setAttribute("download", `equalized-${filename}`);

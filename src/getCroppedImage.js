@@ -11,17 +11,6 @@ function getCroppedImg(image, crop, fileName) {
   canvas.height = crop.height * scaleY;
   const ctx = canvas.getContext("2d");
 
-  console.log({
-    image,
-    cropX: crop.x * scaleX,
-    cropY: crop.y * scaleY,
-    cropWidth: crop.width * scaleX,
-    cropHeight: crop.height * scaleY,
-
-    width: crop.width,
-    height: crop.height,
-  });
-
   ctx.drawImage(
     image,
     crop.x * scaleX,
