@@ -32,5 +32,6 @@ const Title = styled.div`
 `;
 
 const StyledImage = styled.img`
-  width: 75%;
+  max-width: 75vw;
+  max-height: 60vh;
 `;
