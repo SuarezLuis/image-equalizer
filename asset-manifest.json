@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/image-equalizer/static/css/main.bb511301.chunk.css",
-    "main.js": "/image-equalizer/static/js/main.187f35ee.chunk.js",
-    "main.js.map": "/image-equalizer/static/js/main.187f35ee.chunk.js.map",
+    "main.js": "/image-equalizer/static/js/main.f2f1265f.chunk.js",
+    "main.js.map": "/image-equalizer/static/js/main.f2f1265f.chunk.js.map",
     "runtime-main.js": "/image-equalizer/static/js/runtime-main.92b9b78a.js",
     "runtime-main.js.map": "/image-equalizer/static/js/runtime-main.92b9b78a.js.map",
     "static/css/2.896da2ba.chunk.css": "/image-equalizer/static/css/2.896da2ba.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.896da2ba.chunk.css",
     "static/js/2.499faa3f.chunk.js",
     "static/css/main.bb511301.chunk.css",
-    "static/js/main.187f35ee.chunk.js"
+    "static/js/main.f2f1265f.chunk.js"
   ]
 }
