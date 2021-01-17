@@ -21,6 +21,7 @@ const Picture = ({
   ratioHeight,
 }: Props) => {
   const [crop, setCrop] = useState<Crop>({});
+  const [isRruleOfThirds, setIsRruleOfThirds] = useState(false);
   const [imageProperties, setImageProperties] = useState({
     naturalWidth: 0,
     naturalHeight: 0,
@@ -106,8 +107,8 @@ const Picture = ({
   return (
     <PictureWrapper>
       <ReactCrop
-        // keepSelection
-        // imageStyle={{ maxHeight: 300 }}
+        ruleOfThirds={isRruleOfThirds}
+        imageStyle={{ maxHeight: 300 }}
         src={source}
         crop={crop}
         onChange={(crop) => {
@@ -120,21 +121,26 @@ const Picture = ({
         }}
       />
       <div>{filename}</div>
-
       <div>
         Original Image: {imageProperties.naturalWidth} x{" "}
         {imageProperties.naturalHeight}
       </div>
       <div>
-        Preview: {imageProperties.width} x {imageProperties.height} ;
-        {((imageProperties.width || 1) / (imageProperties.height || 1)).toFixed(
-          2
-        )}
+        Preview: {imageProperties.width} x {imageProperties.height}
       </div>
       <div>
-        Selection: {crop.width} x {crop.height} ;{" "}
-        {((crop?.width || 1) / (crop?.height || 1)).toFixed(2)}
+        Selection: {crop.width} x {crop.height}
       </div>
+      <span>
+        Rule of thirds{" "}
+        <input
+          type="checkbox"
+          checked={isRruleOfThirds}
+          onChange={() => {
+            setIsRruleOfThirds(!isRruleOfThirds);
+          }}
+        />
+      </span>
       <Button
         text="Download"
         buttonColor={colors.green}
