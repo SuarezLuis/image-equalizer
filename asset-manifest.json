@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.bb511301.chunk.css",
-    "main.js": "/static/js/main.b5b16532.chunk.js",
-    "main.js.map": "/static/js/main.b5b16532.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2f5a68eb.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2f5a68eb.js.map",
-    "static/css/2.896da2ba.chunk.css": "/static/css/2.896da2ba.chunk.css",
-    "static/js/2.82a15949.chunk.js": "/static/js/2.82a15949.chunk.js",
-    "static/js/2.82a15949.chunk.js.map": "/static/js/2.82a15949.chunk.js.map",
-    "static/js/3.f96a39c8.chunk.js": "/static/js/3.f96a39c8.chunk.js",
-    "static/js/3.f96a39c8.chunk.js.map": "/static/js/3.f96a39c8.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.896da2ba.chunk.css.map": "/static/css/2.896da2ba.chunk.css.map",
-    "static/css/main.bb511301.chunk.css.map": "/static/css/main.bb511301.chunk.css.map",
-    "static/js/2.82a15949.chunk.js.LICENSE.txt": "/static/js/2.82a15949.chunk.js.LICENSE.txt"
+    "main.css": "/image-equalizer/static/css/main.bb511301.chunk.css",
+    "main.js": "/image-equalizer/static/js/main.b0c704af.chunk.js",
+    "main.js.map": "/image-equalizer/static/js/main.b0c704af.chunk.js.map",
+    "runtime-main.js": "/image-equalizer/static/js/runtime-main.8bfd6eeb.js",
+    "runtime-main.js.map": "/image-equalizer/static/js/runtime-main.8bfd6eeb.js.map",
+    "static/css/2.896da2ba.chunk.css": "/image-equalizer/static/css/2.896da2ba.chunk.css",
+    "static/js/2.ecc70a33.chunk.js": "/image-equalizer/static/js/2.ecc70a33.chunk.js",
+    "static/js/2.ecc70a33.chunk.js.map": "/image-equalizer/static/js/2.ecc70a33.chunk.js.map",
+    "static/js/3.f96a39c8.chunk.js": "/image-equalizer/static/js/3.f96a39c8.chunk.js",
+    "static/js/3.f96a39c8.chunk.js.map": "/image-equalizer/static/js/3.f96a39c8.chunk.js.map",
+    "index.html": "/image-equalizer/index.html",
+    "static/css/2.896da2ba.chunk.css.map": "/image-equalizer/static/css/2.896da2ba.chunk.css.map",
+    "static/css/main.bb511301.chunk.css.map": "/image-equalizer/static/css/main.bb511301.chunk.css.map",
+    "static/js/2.ecc70a33.chunk.js.LICENSE.txt": "/image-equalizer/static/js/2.ecc70a33.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2f5a68eb.js",
+    "static/js/runtime-main.8bfd6eeb.js",
     "static/css/2.896da2ba.chunk.css",
-    "static/js/2.82a15949.chunk.js",
+    "static/js/2.ecc70a33.chunk.js",
     "static/css/main.bb511301.chunk.css",
-    "static/js/main.b5b16532.chunk.js"
+    "static/js/main.b0c704af.chunk.js"
   ]
 }
