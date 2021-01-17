@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import styled from "styled-components/macro";
 
-function App() {
+import "./App.css";
+import Authenticated from "./components/Authenticated";
+import Login from "./components/Login";
+import Navbar from "./components/Navbar";
+import colors from "./enums/colors";
+
+import firebase from "./firebase";
+
+function App(): JSX.Element {
+  const [userId, setUserId] = useState<string | undefined>("");
+  firebase.auth().onAuthStateChanged((user) => {
+    setUserId(user?.uid);
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper className="App">
+      <Navbar userId={userId} />
+      {userId ? <Authenticated /> : <Login />}
+    </AppWrapper>
   );
 }
 
 export default App;
+
+const AppWrapper = styled.div`
+  background-color: ${colors.brown};
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "IBM Plex Mono", monospace;
+`;
